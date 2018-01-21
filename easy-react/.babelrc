@@ -1,0 +1,11 @@
+{
+  "presets": ["env", "react"],
+  "plugins": [
+    [
+      "transform-react-jsx",
+      {
+        "pragma": "createElement" // default pragma is React.createElement
+      }
+    ]
+  ]
+}

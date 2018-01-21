@@ -1,17 +1,14 @@
 {
-  "name": "easy-react",
+  "name": "promise",
   "version": "1.0.0",
-  "main": "create-element.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "hyperscript": "^2.0.2"
-  },
-  "devDependencies": {
-    "babel": "^6.23.0"
+    "promises-aplus-tests": "^2.1.2"
   }
 }

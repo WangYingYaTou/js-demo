@@ -1,0 +1,21 @@
+{
+  "name": "antd-mobile-test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd-mobile": "^2.1.4",
+    "babel-plugin-import": "^1.6.3",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "postcss-px2rem": "^0.3.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

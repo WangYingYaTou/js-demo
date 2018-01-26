@@ -1,0 +1,38 @@
+#app {
+  margin: 20px;
+}
+
+.ilist__image {
+  padding-bottom: 20px;
+}
+
+.ilimage__image {
+  position: relative;
+}
+
+.iliimage__mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.3;
+  transition: all 0.5s ease;
+}
+
+.iliimage__mask.have_watermask {
+  background: red;
+}
+
+.iliimage__mask.no_watermask {
+  background: green;
+}
+
+.ilimage__image img {
+  width: 100%;
+}
+
+.ilimage__desc {
+  white-space: normal;
+  word-wrap: break-word;
+  margin-top: 10px;
+}

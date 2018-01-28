@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul id="list">
+    <li data-id="1">
+      <span>test1</span>
+    </li>
+    <li data-id="2">
+      <span>test2</span>
+    </li>
+    <li data-id="3">
+      <span>test3</span>
+    </li>
+    <li data-id="4">
+      <span>test4</span>
+    </li>
+    <li data-id="5">
+      <span>test5</span>
+    </li>
+    <li data-id="6">
+      <span>test6</span>
+    </li>
+  </ul>
+
+
+  <script>
+    function delegate(parentElement, selector, eventNames, func) {
+      function triggerEvent(e) {
+        // event.target 引起事件触发的元素， event.currentTaget 指向事件绑定的元素，
+        let target = e.target || e.srcElement
+
+        const currentTarget = e.currentTarget
+
+        // 处理 matches 的兼容性
+        if (!Element.prototype.matches) {
+          Element.prototype.matches =
+            Element.prototype.matchesSelector ||
+            Element.prototype.mozMatchesSelector ||
+            Element.prototype.msMatchesSelector ||
+            Element.prototype.oMatchesSelector ||
+            Element.prototype.webkitMatchesSelector ||
+            function (s) {
+              var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+                i = matches.length;
+              while (--i >= 0 && matches.item(i) !== this) {}
+              return i > -1;
+            };
+        }
+
+        // 遍历外层并且匹配
+        while (target !== currentTarget) {
+          // 判断是否匹配到我们所需要的元素上
+          if (target.matches(selector)) {
+            var sTarget = target;
+            // 执行绑定的函数，注意 this
+            func.call(sTarget, Array.prototype.slice.call(arguments))
+          }
+
+          target = target.parentNode;
+        }
+
+      }
+      eventNames.split('.').forEach(eventName => {
+        parentElement.addEventListener(eventName, triggerEvent)
+      })
+    }
+
+    const list = document.getElementById('list')
+    delegate(list, 'li', 'click', function (e) {
+      console.log(e)
+      console.log(this.dataset);
+    })
+  </script>
+</body>
+
+</html>

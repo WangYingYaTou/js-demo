@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    span {
+      display: inline-block;
+      width: 20px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script>
+    var app = document.getElementById("app");
+
+    var j = 1;
+    /**
+     * 渲染方式
+     * 
+     * @number {number} 数量
+     * */
+    function showDom(number) {
+      console.log('渲染' + (j++) + "次");
+      for (var i = 0; i < number; i++) {
+        var span = document.createElement("span");
+        span.innerHTML = i;
+        app.appendChild(span);
+      }
+    }
+    /**
+     * 渲染大数据量的dom节点
+     * 
+     * @count {number} 总数量
+     * 
+     * */
+    function init(count) {
+      if (typeof count !== "number") {
+        console.warn(count + "类型不是：Number");
+        return;
+      }
+      if (count > 500) {
+        setTimeout(function () {
+          showDom(500);
+          init(count - 500);
+        }, 200);
+      } else {
+        showDom(count);
+      }
+    }
+
+    init(40000);
+  </script>
+</body>
+
+</html>

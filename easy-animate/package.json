@@ -1,0 +1,19 @@
+{
+  "name": "easy-animate",
+  "version": "1.0.0",
+  "description": "写一个类似于 anime.js 的冻 \b 动画库！！！",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-loader": "^7.1.2"
+  }
+}

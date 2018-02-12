@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Easy animate</title>
+  <script src="../dist/anime.js"></script>
+  <style>
+    #box {
+      width: 100px;
+      height: 100px;
+      background: green;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box"></div>
+
+  <button id="start">START</button>
+  <button id="end">END</button>
+  <button id="stop">STOP</button>
+  <button id="reset">RESET</button>
+  <script type="text/javascript">
+    const el = (name) => document.querySelector(name);
+    const box = el('#box');
+    const timeline = new Core({
+      duration: 3000,
+      value: [
+        [0, 400],
+        [0, 600],
+        [1, 1.5]
+      ],
+      render: function (value1, value2, value3) {
+        box.style.transform = `translate(${ value1 }px, ${ value2 }px) scale(${value3})`;
+      },
+      timingFunction: 'easeOut',
+      onPlay: () => console.log('play'),
+      onEnd: () => console.log('end'),
+      onReset: () => console.log('reset'),
+      onStop: () => console.log('stop')
+    })
+    timeline.play();
+
+    el('#start').onclick = () => timeline.play();
+    el('#end').onclick = () => timeline.end();
+    el('#stop').onclick = () => timeline.stop()
+    el('#reset').onclick = () => timeline.reset()
+  </script>
+
+</body>
+
+</html>

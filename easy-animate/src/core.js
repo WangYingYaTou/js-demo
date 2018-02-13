@@ -93,17 +93,6 @@ class Core {
     this.onStop && this.onStop()
   }
 
-  resume() {
-    if (this.state === 'stop') {
-      this.state = ''
-    } else {
-    }
-  }
-
-  _resume() {
-    this.state = 'resume'
-  }
-
   _renderStopState(t) {
     const d = this.duration,
       func = Tween[this.timingFunction] || Tween['linear']

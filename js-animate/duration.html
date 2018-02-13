@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Duration</title>
+  <script src="./anime-master/anime.js"></script>
+  <style>
+    .el {
+      width: 30px;
+      height: 30px;
+      background: red;
+      margin: 10px;
+    }
+  </style>
+  <style>
+    #scatter {
+      height: 1000px;
+      position: relative;
+    }
+
+    .particule {
+      position: absolute;
+    }
+
+    .fireworks {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      c
+    }
+  </style>
+</head>
+
+<body>
+  <div id="functionBasedDuration">
+    <div class="line">
+      <div class="small square el"></div>
+    </div>
+    <div class="line">
+      <div class="small square el"></div>
+    </div>
+    <div class="line">
+      <div class="small square el"></div>
+    </div>
+  </div>
+
+
+  <div id="functionBasedPropVal">
+    <div class="line">
+      <div data-x="160" class="small square el"></div>
+    </div>
+    <div class="line">
+      <div data-x="80" class="small square el"></div>
+    </div>
+    <div class="line">
+      <div data-x="250" class="small square el"></div>
+    </div>
+  </div>
+
+
+  <div>
+    <label for="">progress</label>
+    <input class="progress" step=".001" type="range" min="0" max="100" value="0">
+  </div>
+
+
+  <div id="update">
+    <div class="logs">
+      <input class="log current-time-log">
+      <input class="log progress-log"> </div>
+    <div class="large square el"></div>
+  </div>
+
+
+  <div id="motionPath">
+    <div class="motion-path">
+      <div class="small square el follow-path"></div>
+      <svg width="256" height="112" viewBox="0 0 256 112">
+        <path fill="none" stroke="currentColor" stroke-width="1" d="M8,56 C8,33.90861 25.90861,16 48,16 C70.09139,16 88,33.90861 88,56 C88,78.09139 105.90861,92 128,92 C150.09139,92 160,72 160,56 C160,40 148,24 128,24 C108,24 96,40 96,56 C96,72 105.90861,92 128,92 C154,93 168,78 168,56 C168,33.90861 185.90861,16 208,16 C230.09139,16 248,33.90861 248,56 C248,78.09139 230.09139,96 208,96 L48,96 C25.90861,96 8,78.09139 8,56 Z"></path>
+      </svg>
+    </div>
+  </div>
+
+
+  <script>
+    var functionBasedDuration = anime({
+      targets: '#functionBasedDuration .el',
+      translateX: 250,
+      direction: 'alternate',
+      loop: true,
+      duration: function (el, i, l) {
+        return 1000 + (i * 1000);
+      }
+    });
+
+
+    var functionBasedPropVal = anime({
+      targets: '#functionBasedPropVal .el',
+      translateX: function (el) {
+        return el.getAttribute('data-x');
+      },
+      translateY: function (el, i) {
+        return 50 + (-50 * i);
+      },
+      scale: function (el, i, l) {
+        return (l - i) + .25;
+      },
+      rotate: function () {
+        return anime.random(-360, 360);
+      },
+      duration: function () {
+        return anime.random(1200, 1800);
+      },
+      duration: function () {
+        return anime.random(800, 1600);
+      },
+      delay: function () {
+        return anime.random(0, 1000);
+      },
+      direction: 'alternate',
+      loop: true
+    });
+  </script>
+
+
+  <script>
+    var updateLogEl = document.querySelector('#update .current-time-log');
+    var progressLogEl = document.querySelector('#update .progress-log');
+
+    var update = anime({
+      targets: '#callbacks .el',
+      translateX: 250,
+      delay: 1000,
+      update: function (anim) {
+        updateLogEl.value = 'current time : ' + Math.round(anim.currentTime) + 'ms';
+        progressLogEl.value = 'progress : ' + Math.round(anim.progress) + '%';
+      }
+    });
+  </script>
+
+  <script>
+    var path = anime.path('#motionPath path');
+
+    var motionPath = anime({
+      targets: '#motionPath .el',
+      translateX: path('x'),
+      translateY: path('y'),
+      rotate: path('angle'),
+      easing: 'linear',
+      duration: 2000,
+      loop: true
+    });
+  </script>
+
+
+
+  <div id="morphing">
+    <svg width="140" height="140" viewBox="0 0 140 140">
+      <g fill="none" fill-rule="evenodd">
+        <g fill="currentColor" fill-opacity=".15" transform="translate(0 6)">
+          <polygon points="70 0 136.574 48.369 111.145 126.631 28.855 126.631 3.426 48.369"></polygon>
+          <polygon points="70 18 119.455 53.931 100.565 112.069 39.435 112.069 20.545 53.931"></polygon>
+          <polygon points="70 34.86 101.727 57.911 89.609 95.209 50.391 95.209 38.273 57.911"></polygon>
+          <polygon points="70 50.898 84.864 61.697 79.186 79.171 60.814 79.171 55.136 61.697"></polygon>
+        </g>
+        <polygon class="polymorph" stroke-width="1" stroke="currentColor" points="70 30.282669044712847 119.20443123266395 59.99943123266395 104.21025644069654 123.17453151004075 54.55068767336049 95.34833095528715 9.708669044712845 56.586412604016296 "></polygon>
+      </g>
+    </svg>
+  </div>
+
+
+  <script>
+    let points = [{
+        value: '70 41 118.574 59.369 111.145 132.631 60.855 84.631 20.426 60.369'
+      },
+      {
+        value: '70 6 119.574 60.369 100.145 117.631 39.855 117.631 55.426 68.369'
+      },
+      {
+        value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369'
+      },
+      {
+        value: '70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369'
+      },
+      {
+        value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369'
+      },
+      {
+        value: '70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369'
+      },
+      {
+        value: '70 41 118.574 59.369 111.145 132.631 60.855 84.631 20.426 60.369'
+      },
+      {
+        value: '70 6 119.574 60.369 100.145 117.631 39.855 117.631 55.426 68.369'
+      },
+    ]
+
+
+    var morphing = anime({
+      targets: '#morphing .polymorph',
+      points: points,
+      easing: 'easeOutQuad',
+      duration: 2000,
+      loop: true
+    });
+  </script>
+
+
+  <div id="lineDrawing">
+    <svg viewBox="0 0 280 100">
+      <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
+        <path d="M58 80V50.12C57.7 41.6 51.14 35 43 35a15 15 0 0 0 0 30h7.5v15H43a30 30 0 1 1 0-60c16.42 0 29.5 13.23 30 29.89V80H58z" stroke-dasharray="316.85528564453125" style="stroke-dashoffset: 313.358px;"></path>
+        <path d="M73 80V20H58v60h15z" stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
+        <path d="M58 80V49.77C58.5 33.23 71.58 20 88 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80H58zm75 0V20h-15v60h15z" stroke-dasharray="441.1739501953125" style="stroke-dashoffset: 441.174px;"></path>
+        <path d="M118 80V49.77C118.5 33.23 131.58 20 148 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80h-15zm-7.5-60a7.5 7.5 0 1 1-7.48 8v-1c.25-3.9 3.5-7 7.48-7z" stroke-dasharray="338.3053894042969" style="stroke-dashoffset: 338.305px;"></path>
+        <path d="M133 65a15 15 0 0 1-15-15v-7.5h-15V50a30 30 0 0 0 30 30V65zm30 15V49.77C163.5 33.23 176.58 20 193 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80h-15z" stroke-dasharray="406.8699035644531" style="stroke-dashoffset: 406.87px;"></path>
+        <path d="M238 65a15 15 0 0 1 0-30c8.1 0 14.63 6.53 15 15h-15v15h30V49.89C267.5 33.23 254.42 20 238 20a30 30 0 0 0 0 60V65z" stroke-dasharray="301.8561706542969" style="stroke-dashoffset: 301.856px;"></path>
+        <path d="M260.48 65a7.5 7.5 0 1 1-7.48 8v-1c.26-3.9 3.5-7 7.48-7z" stroke-dasharray="47.128875732421875" style="stroke-dashoffset: 47.1289px;"></path>
+      </g>
+    </svg>
+  </div>
+
+  <script>
+    var lineDrawing = anime({
+      targets: '#lineDrawing .lines path',
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: 'easeInOutSine',
+      duration: 1500,
+      delay: function (el, i) {
+        return i * 250
+      },
+      direction: 'alternate',
+      loop: true
+    });
+  </script>
+
+
+
+  <div id="scatter"></div>
+
+  <div></div>
+
+  <script>
+    var numberOfEls = 1000;
+    var duration = 1000;
+    var midScreenX = window.innerWidth / 4;
+    var midScreenY = window.innerHeight / 4;
+    var radius = Math.sqrt(midScreenX * midScreenX + midScreenY * midScreenY);
+    var fragment = document.createDocumentFragment();
+
+    for (var i = 0; i < numberOfEls; i++) {
+      var hue = Math.round(360 / numberOfEls * i);
+      var angle = Math.random() * Math.PI * 2;
+      var el = document.createElement('div');
+      el.classList.add('particule');
+      el.style.backgroundColor = 'hsl(' + hue + ', 40%, 60%)';
+      el.style.width = '1px';
+      el.style.height = '1px';
+      anime({
+        targets: el,
+        width: ['1px', '10px'],
+        height: ['1px', '10px'],
+        left: [midScreenX + 'px', Math.cos(angle) * radius + midScreenX + 'px'],
+        top: [midScreenY + 'px', Math.sin(angle) * radius + midScreenY + 'px'],
+        delay: (duration / numberOfEls) * i,
+        duration: duration,
+        easing: 'easeInExpo',
+        loop: true
+      });
+      fragment.appendChild(el);
+    }
+
+    document.querySelector('#scatter').appendChild(fragment);
+  </script>
+
+  <canvas class="fireworks"></canvas>
+  <script>
+    var fireworks = (function () {
+
+      var canvasEl = document.querySelector('.fireworks');
+      var ctx = canvasEl.getContext('2d');
+      var numberOfParticules = 40;
+      var pointerX = 0;
+      var pointerY = 0;
+      var tap = ('ontouchstart' in window || navigator.msMaxTouchPoints) ? 'touchstart' : 'mousedown';
+      var colors = ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C'];
+
+      function setCanvasSize() {
+        canvasEl.width = window.innerWidth * 2;
+        canvasEl.height = window.innerHeight * 2;
+        canvasEl.style.width = window.innerWidth + 'px';
+        canvasEl.style.height = window.innerHeight + 'px';
+        canvasEl.getContext('2d').scale(2, 2);
+      }
+
+      function updateCoords(e) {
+        pointerX = e.clientX || e.touches[0].clientX;
+        pointerY = e.clientY || e.touches[0].clientY;
+      }
+
+      function setParticuleDirection(p) {
+        var angle = anime.random(0, 360) * Math.PI / 180;
+        var value = anime.random(50, 180);
+        var radius = [-1, 1][anime.random(0, 1)] * value;
+        return {
+          x: p.x + radius * Math.cos(angle),
+          y: p.y + radius * Math.sin(angle)
+        }
+      }
+
+      function createParticule(x, y) {
+        var p = {};
+        p.x = x;
+        p.y = y;
+        p.color = colors[anime.random(0, colors.length - 1)];
+        p.radius = anime.random(16, 32);
+        p.endPos = setParticuleDirection(p);
+        p.draw = function () {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, true);
+          ctx.fillStyle = p.color;
+          ctx.fill();
+        }
+        return p;
+      }
+
+      function createCircle(x, y) {
+        var p = {};
+        p.x = x;
+        p.y = y;
+        p.color = '#FFF';
+        p.radius = 0.1;
+        p.alpha = .5;
+        p.lineWidth = 6;
+        p.draw = function () {
+          ctx.globalAlpha = p.alpha;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, true);
+          ctx.lineWidth = p.lineWidth;
+          ctx.strokeStyle = p.color;
+          ctx.stroke();
+          ctx.globalAlpha = 1;
+        }
+        return p;
+      }
+
+      function renderParticule(anim) {
+        for (var i = 0; i < anim.animatables.length; i++) {
+          anim.animatables[i].target.draw();
+        }
+      }
+
+      function animateParticules(x, y) {
+        var circle = createCircle(x, y);
+        var particules = [];
+        for (var i = 0; i < numberOfParticules; i++) {
+          particules.push(createParticule(x, y));
+        }
+        anime.timeline().add({
+            targets: particules,
+            x: function (p) {
+              return p.endPos.x;
+            },
+            y: function (p) {
+              return p.endPos.y;
+            },
+            radius: 0.1,
+            duration: anime.random(1200, 1800),
+            easing: 'easeOutExpo',
+            update: renderParticule
+          })
+          .add({
+            targets: circle,
+            radius: anime.random(80, 160),
+            lineWidth: 0,
+            alpha: {
+              value: 0,
+              easing: 'linear',
+              duration: anime.random(600, 800),
+            },
+            duration: anime.random(1200, 1800),
+            easing: 'easeOutExpo',
+            update: renderParticule,
+            offset: 0
+          });
+      }
+
+      var render = anime({
+        duration: Infinity,
+        update: function () {
+          ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
+        }
+      });
+
+      document.addEventListener(tap, function (e) {
+        window.human = true;
+        render.play();
+        updateCoords(e);
+        animateParticules(pointerX, pointerY);
+      }, false);
+
+      window.addEventListener('resize', setCanvasSize, false);
+
+      return {
+        render: render,
+        setCanvasSize: setCanvasSize,
+        animateParticules: animateParticules
+      }
+
+    })();
+
+    fireworks.setCanvasSize();
+  </script>
+</body>
+
+</html>

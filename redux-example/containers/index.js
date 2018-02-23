@@ -27,15 +27,3 @@ render(
   </Provider>,
   document.getElementById('root')
 )
-
-// Webpack Hot Module Replacement API
-if (module.hot) {
-  module.hot.accept('../components/app', () => {
-    render(
-      <Provider store={store}>
-        <App />
-      </Provider>,
-      document.getElementById('root')
-    )
-  })
-}

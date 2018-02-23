@@ -4,11 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 
 module.exports = {
-  entry: [
-    'react-hot-loader/patch',
-    'webpack-hot-middleware/client',
-    './containers/index.js',
-  ],
+  entry: {
+    index: './containers/index.js',
+    async: './async/index.js',
+  },
   devtool: 'cheap-source-map',
   output: {
     filename: '[name].js',
@@ -26,8 +25,8 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin('./dist'),
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
+      chunks: ['index'],
       title: 'Output Management',
       template: './index.html',
     }),

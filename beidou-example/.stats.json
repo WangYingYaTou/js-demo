@@ -1,0 +1,33 @@
+Hash: af1a0601c9ac4ee74d23
+Version: webpack 3.11.0
+Time: 4901ms
+                         Asset       Size  Chunks             Chunk Names
+script.js?af1a0601c9ac4ee74d23    94.8 kB       0  [emitted]  script
+ style.js?af1a0601c9ac4ee74d23    1.13 kB       1  [emitted]  style
+static.js?af1a0601c9ac4ee74d23    1.02 kB       2  [emitted]  static
+ index.js?af1a0601c9ac4ee74d23    1.04 kB       3  [emitted]  index
+                   manifest.js    81.1 kB       4  [emitted]  manifest
+                    script.css  114 bytes       0  [emitted]  script
+                     style.css  114 bytes       1  [emitted]  style
+  [13] ./node_modules/react-hot-loader/patch.js 40 bytes {4} [built]
+  [14] (webpack)-hot-middleware/client.js?reload=true 7.35 kB {4} [built]
+  [15] ./node_modules/babel-runtime/core-js/object/get-prototype-of.js 104 bytes {4} [built]
+  [18] ./node_modules/babel-runtime/helpers/classCallCheck.js 208 bytes {4} [built]
+  [54] multi react-hot-loader/patch webpack-hot-middleware/client?reload=true ./client/index.jsx 52 bytes {3} [built]
+  [60] ./node_modules/strip-ansi/index.js 161 bytes {4} [built]
+  [68] ./client/index.jsx 2.56 kB {3} [built]
+ [109] multi react-hot-loader/patch webpack-hot-middleware/client?reload=true ./client/script/index.jsx 52 bytes {0} [built]
+ [110] ./client/script/index.jsx 2.95 kB {0} [built]
+ [121] ./client/script/app.jsx 1.08 kB {0} [built]
+ [123] multi react-hot-loader/patch webpack-hot-middleware/client?reload=true ./client/static/index.jsx 52 bytes {2} [built]
+ [124] ./client/static/index.jsx 2.45 kB {2} [built]
+ [125] multi react-hot-loader/patch webpack-hot-middleware/client?reload=true ./client/style/index.jsx 52 bytes {1} [built]
+ [126] ./client/style/index.jsx 2.59 kB {1} [built]
+ [127] ./client/style/index.scss 41 bytes {1} [built]
+    + 118 hidden modules
+Child extract-text-webpack-plugin:
+       [0] ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./client/style/index.scss 279 bytes {0} [built]
+       [1] ./node_modules/css-loader/lib/css-base.js 1.51 kB {0} [built]
+Child extract-text-webpack-plugin:
+       [0] ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./client/script/index.scss 279 bytes {0} [built]
+       [1] ./node_modules/css-loader/lib/css-base.js 1.51 kB {0} [built]

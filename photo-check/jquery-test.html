@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <title>Jquery test</title>
+</head>
+
+<body>
+
+  <textarea id="normald"></textarea>
+
+  <script>
+    function shouhang() {
+      var text = $('#normald').val();
+      var rows = text.split("\n");
+      loop:
+        for (var i = 1; i < rows.length; i++) {
+          const cols = rows[i].split(/\t|\s/);
+          for (var j = 1; j < cols.length; j++) {
+            if (cols[j] !== "0" && cols[j] !== "1") {
+              alert("检测到非首行首列存在不是1或0的数字");
+              break loop
+            }
+          }
+        }
+    }
+  </script>
+
+  <script>
+    $('#normald').blur(function () {
+      shouhang();
+    })
+  </script>
+</body>
+
+</html>

@@ -25,7 +25,7 @@ App.prototype.request = function(req, res, requestHandle = () => {}) {
 
 const sleep = delay => {
   return new Promise((resolve, reject) => {
-    setTimeout(() => resolve(100), delay)
+    setTimeout(() => resolve(delay), delay)
   })
 }
 
@@ -39,7 +39,9 @@ app.use(async (req, res, next) => {
   next()
 })
 
-app.use((req, res, next) => {
+app.use(async (req, res, next) => {
+  const result = await sleep(2000)
+  console.log('result2', result)
   console.log('this is middleware2')
   next()
 })

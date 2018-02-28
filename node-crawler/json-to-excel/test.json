@@ -1,0 +1,981 @@
+[
+  {
+    "_id": { "$oid": "57e8e9c271f139611df687e5" },
+    "baseInfo": {
+      "housePicture": [
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160926/201609261710072109.jpg",
+          "enumPictureCategory": 8,
+          "pictureExplain": "",
+          "pictureIndex": 0,
+          "pictureGuid": "84907ef1-4bda-42e9-a834-cdd26edae50c"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160926/201609261711588862.jpg",
+          "enumPictureCategory": 7,
+          "pictureExplain": "",
+          "pictureIndex": 1,
+          "pictureGuid": "f2697cf8-571b-4c1b-84d7-e1c3131c083a"
+        },
+        {
+          "pictureURL": "/upload/landlordunit/day_160926/20160926171350471.jpg",
+          "enumPictureCategory": 7,
+          "pictureExplain": "",
+          "pictureIndex": 2,
+          "pictureGuid": "0dcff2f3-dc0a-4ddf-a092-cdb1ce2efd7e"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160926/201609261713165856.jpg",
+          "enumPictureCategory": 7,
+          "pictureExplain": "",
+          "pictureIndex": 3,
+          "pictureGuid": "7297e4bb-14b6-443e-89d7-4c98d9a57b50"
+        },
+        {
+          "pictureURL": "/upload/landlordunit/day_160926/20160926170925703.jpg",
+          "enumPictureCategory": 3,
+          "pictureExplain": "",
+          "pictureIndex": 4,
+          "pictureGuid": "c4fcc98e-482b-4c69-9694-0248af4dc0e6"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160926/201609261712443500.jpg",
+          "enumPictureCategory": 3,
+          "pictureExplain": "",
+          "pictureIndex": 5,
+          "pictureGuid": "c54af069-eb2f-4d6e-ba6f-c7667df33013"
+        },
+        {
+          "pictureURL": "/upload/landlordunit/day_160926/20160926171614621.jpg",
+          "enumPictureCategory": 1,
+          "pictureExplain": "",
+          "pictureIndex": 6,
+          "pictureGuid": "efd6b9f9-1459-40f9-b804-cb961e31f385"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160926/201609261708086785.jpg",
+          "enumPictureCategory": 2,
+          "pictureExplain": "",
+          "pictureIndex": 7,
+          "pictureGuid": "fc8427e7-9a31-4656-9ddc-bca43a67fa59"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160926/201609261714291314.jpg",
+          "enumPictureCategory": 2,
+          "pictureExplain": "",
+          "pictureIndex": 8,
+          "pictureGuid": "18c32bae-d57b-43d0-8290-34de53103c90"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160926/201609261714547310.jpg",
+          "enumPictureCategory": 4,
+          "pictureExplain": "*Only in master room",
+          "pictureIndex": 9,
+          "pictureGuid": "71c0af76-7518-44bc-9247-3e708b6cb79a"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160926/201609261715209166.jpg",
+          "enumPictureCategory": 4,
+          "pictureExplain": "",
+          "pictureIndex": 10,
+          "pictureGuid": "350f4927-3163-4478-a634-1011f8d4a43d"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160926/201609261715451348.jpg",
+          "enumPictureCategory": 4,
+          "pictureExplain": "",
+          "pictureIndex": 11,
+          "pictureGuid": "2d487ed8-9896-4850-9c77-a6b7d230e51a"
+        }
+      ],
+      "housingType": {
+        "bedroomCount": 3,
+        "livingroomCount": 1,
+        "bathroomCount": 3,
+        "kitchenCount": 1,
+        "balconyCount": 0,
+        "studyCount": 0
+      },
+      "bedInfo": [
+        { "unitAmenityGoodsID": 16, "unitAmenityGoodsSpecID": 13, "number": 3 },
+        { "unitAmenityGoodsID": 53, "unitAmenityGoodsSpecID": 41, "number": 1 }
+      ],
+      "houseLabel": [288, 293, 304],
+      "enumHouseFacilities": [
+        1,
+        3,
+        4,
+        6,
+        8,
+        9,
+        13,
+        15,
+        16,
+        17,
+        18,
+        19,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        30,
+        31,
+        33,
+        34,
+        35,
+        47,
+        52,
+        53,
+        61
+      ],
+      "name": "Zen Oasis Chiang Mai Villa",
+      "enumHouseType": 7,
+      "grossArea": 650,
+      "enumScenicFeature": 0,
+      "enumDecoration": 1,
+      "introduction":
+        "View: swimming pool is surrounded by bedrooms and private space to enjoy family's or friends' activity. \r\nDecoration: Modern and a tiny Lanna.\r\nSupport Service, facilities and surrounding: Bicycle to ride around the area. Butler and housekeeper. Transportation service to anywhere guests want to go. ",
+      "brightSpot":
+        "three bedrooms private pool villa for 6-8 members, with a very private atmosphere and great service ",
+      "instanceCount": 1,
+      "otaName": "三室一厅"
+    },
+    "checkinInstructions": {
+      "acceptTime": [{ "startAcceptTime": "00:00", "endAcceptTime": "24:00" }],
+      "enumServiceProvisions": [2],
+      "enumAcceptAges": [1, 2],
+      "enumIndoorPermits": [16, 1, 4, 8],
+      "enumCardPaymentTypes": [1, 2],
+      "checkInReceptionTime": "12:00",
+      "checkOutLatestTime": "14:00",
+      "enumAcceptSex": 0,
+      "cookingChargeDescription":
+        "for lunch and dinner 2,000THB/meal (operation cost only, ingredient cost not included)",
+      "partyChargeDescription": "",
+      "recommendedGuests": 8,
+      "extraPersonChargeDescription": "1,000 THB/ person/ night",
+      "extraBedLimit": 3,
+      "extraBedChargeDescription": "1,000THB/person/night/bed",
+      "enumCleaningFrequency": 2,
+      "enumSheetReplaceFrequency": 3,
+      "enumToothSetReplaceFrequency": 1,
+      "enumTowelReplaceFrequency": 2,
+      "livingFee": "",
+      "compensationInfo":
+        "Guests are willing to pay for damages of a facilities that are caused by accident or intention. ",
+      "checkinPrompt":
+        "1. Please show your valid identification (passport) for check-in.\r\n2. While check-in, please fill-up all information in the form. \r\n3. Zen Chiang Mai Villa will not take any responsibilities to any lost or damages of personal belongings. \r\n4. Every property has a strict non-smoking policy in each room. 5,000THB/room will be charged for a penalty.\r\n5. For pool villas, there is no life guard on duty. Be careful while swimming. Any responsibilities will\r\n not be taken for accidents.  \r\n"
+    },
+    "createOperator": "zenchiangmaivilla.cn@gmail.com",
+    "createOperatorId": { "$numberLong": "4980693" },
+    "createTime": { "$date": "2016-09-26T08:04:27.493Z" },
+    "enumDataEntityStatus": 0,
+    "houseValidate": false,
+    "isActive": true,
+    "lastUpdateOperator": "zenchiangmaivilla.cn@gmail.com",
+    "lastUpdateOperatorId": { "$numberLong": "4980693" },
+    "lastUpdateTime": { "$date": "2016-09-26T09:26:25.946Z" },
+    "locationInfo": {
+      "cityID": 4175,
+      "level2AreaID": -1,
+      "residentialQuarterName": "Saraphi",
+      "doorplate": "52/52 moo9 Tha Wangtan, Saraphi, Chiang Mai 50140",
+      "receptionAddress":
+        "Thailand/Chiang MaiSaraphi52/52 moo9 Tha Wangtan, Saraphi, Chiang Mai 50140",
+      "longitude": 99.00759148563066,
+      "latitude": 18.706758233746864,
+      "geoCoordSysType": "wgs84"
+    },
+    "tavernGuid": "00096391-5260-498b-9df6-e718b0e8e67d",
+    "unitGuid": "455e220b-7cf4-4ef1-a22a-5b423c261918",
+    "unitNumber": "HN242272"
+  },
+  {
+    "_id": { "$oid": "57edfb4171f13931970b0277" },
+    "baseInfo": {
+      "housePicture": [
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160930/201609301322006049.jpg",
+          "enumPictureCategory": 3,
+          "pictureExplain": "",
+          "pictureIndex": 0,
+          "pictureGuid": "9d6b12f2-29ed-421e-9bc2-0d815fa52961"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160930/201609301324478827.jpg",
+          "enumPictureCategory": 7,
+          "pictureExplain": "",
+          "pictureIndex": 1,
+          "pictureGuid": "2ee3a450-440e-4440-97aa-5721b9940c46"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160930/201609301326287694.jpg",
+          "enumPictureCategory": 7,
+          "pictureExplain": "",
+          "pictureIndex": 2,
+          "pictureGuid": "92afe5f5-976f-4ca4-8245-4bf5de8db960"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160930/201609301327178079.jpg",
+          "enumPictureCategory": 2,
+          "pictureExplain": "",
+          "pictureIndex": 3,
+          "pictureGuid": "0b2984a5-f020-4e01-92fa-1b5ef49d3c23"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160930/201609301328198536.jpg",
+          "enumPictureCategory": 3,
+          "pictureExplain": "",
+          "pictureIndex": 4,
+          "pictureGuid": "9c0e6ad7-cec7-44c1-a39f-401c1e3756d6"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160930/201609301330084061.jpg",
+          "enumPictureCategory": 7,
+          "pictureExplain": "",
+          "pictureIndex": 5,
+          "pictureGuid": "80707df0-1b99-4007-aed0-8218a198d9dd"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160930/201609301331324908.jpg",
+          "enumPictureCategory": 2,
+          "pictureExplain": "",
+          "pictureIndex": 6,
+          "pictureGuid": "872866e2-4307-403e-a069-b81882633b39"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160930/201609301333304697.jpg",
+          "enumPictureCategory": 7,
+          "pictureExplain": "",
+          "pictureIndex": 7,
+          "pictureGuid": "d7b09747-a1b8-44aa-b352-e53395fab7de"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160930/201609301334317445.jpg",
+          "enumPictureCategory": 4,
+          "pictureExplain": "",
+          "pictureIndex": 8,
+          "pictureGuid": "e1b5059c-3ba3-43a5-b79e-53538727b85f"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160930/201609301335598249.jpg",
+          "enumPictureCategory": 2,
+          "pictureExplain": "",
+          "pictureIndex": 9,
+          "pictureGuid": "1f88b67f-358a-4352-9639-b9c5ca94d04a"
+        }
+      ],
+      "housingType": {
+        "bedroomCount": 5,
+        "livingroomCount": 1,
+        "bathroomCount": 4,
+        "kitchenCount": 1,
+        "balconyCount": 0,
+        "studyCount": 0
+      },
+      "bedInfo": [
+        { "unitAmenityGoodsID": 16, "unitAmenityGoodsSpecID": 13, "number": 4 },
+        { "unitAmenityGoodsID": 17, "unitAmenityGoodsSpecID": 17, "number": 2 }
+      ],
+      "houseLabel": [288, 293, 303, 304, 306, 307],
+      "enumHouseFacilities": [
+        1,
+        3,
+        4,
+        6,
+        8,
+        9,
+        13,
+        15,
+        16,
+        17,
+        18,
+        19,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        30,
+        31,
+        33,
+        34,
+        35,
+        47,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        60,
+        61
+      ],
+      "name": "Zen Sky Chiang Mai Villa",
+      "enumHouseType": 7,
+      "grossArea": 930,
+      "enumScenicFeature": 0,
+      "enumDecoration": 1,
+      "introduction":
+        "View: swimming pool is surrounded by bedrooms and private space to enjoy family's or friends' activity. \r\nDecoration: Modern and a tiny Lanna.\r\nSupport Service, facilities and surrounding: Bicycle to ride around the area. Butler and housekeeper. Transportation service to anywhere guests want to go. ",
+      "brightSpot":
+        "Private pool villa with an open sky, you would feel freedom and have a great vacation here.  ",
+      "instanceCount": 1
+    },
+    "checkinInstructions": {
+      "acceptTime": [{ "startAcceptTime": "08:00", "endAcceptTime": "17:00" }],
+      "enumServiceProvisions": [2],
+      "enumAcceptAges": [1, 2],
+      "enumIndoorPermits": [16, 1, 4],
+      "enumCardPaymentTypes": [1, 2],
+      "checkInReceptionTime": "12:00",
+      "checkOutLatestTime": "14:00",
+      "enumAcceptSex": 0,
+      "cookingChargeDescription":
+        "for lunch and dinner 2,000THB/meal (operation cost only, ingredient cost not included)",
+      "partyChargeDescription": "",
+      "recommendedGuests": 10,
+      "extraPersonChargeDescription": "1,000 THB/ person/ night",
+      "extraBedLimit": 3,
+      "extraBedChargeDescription": "1,000THB/person/night/bed",
+      "enumCleaningFrequency": 2,
+      "enumSheetReplaceFrequency": 3,
+      "enumToothSetReplaceFrequency": 1,
+      "enumTowelReplaceFrequency": 2,
+      "livingFee": "",
+      "compensationInfo":
+        "Guests are willing to pay for damages of a facilities that are caused by accident or intention. ",
+      "checkinPrompt":
+        "1. Please show your valid identification (passport) for check-in.\r\n2. While check-in, please fill-up all information in the form. \r\n3. Zen Chiang Mai Villa will not take any responsibilities to any lost or damages of personal belongings. \r\n4. Every property has a strict non-smoking policy in each room. 5,000THB/room will be charged for a penalty.\r\n5. For pool villas, there is no life guard on duty. Be careful while swimming. Any responsibilities will\r\n not be taken for accidents.  \r\n"
+    },
+    "createOperator": "zenchiangmaivilla.cn@gmail.com",
+    "createOperatorId": { "$numberLong": "4980693" },
+    "createTime": { "$date": "2016-09-30T04:25:56.827Z" },
+    "enumDataEntityStatus": 0,
+    "houseValidate": false,
+    "isActive": false,
+    "lastUpdateOperator": "zenchiangmaivilla.cn@gmail.com",
+    "lastUpdateOperatorId": { "$numberLong": "4980693" },
+    "lastUpdateTime": { "$date": "2016-09-30T05:42:25.083Z" },
+    "locationInfo": {
+      "cityID": 4175,
+      "level2AreaID": -1,
+      "residentialQuarterName": "Sansai",
+      "doorplate": "295-195/1 moo5, Sansai Noi, Sansai, CM 50210",
+      "receptionAddress":
+        "Thailand/Chiang MaiSansai295-195/1 moo5, Sansai Noi, Sansai, CM 50210",
+      "longitude": 99.02904623374639,
+      "latitude": 18.829633042458877,
+      "geoCoordSysType": "wgs84"
+    },
+    "tavernGuid": "00096391-5260-498b-9df6-e718b0e8e67d",
+    "unitGuid": "95fd25b6-21a7-44ea-a04d-de2a30b6b39f",
+    "unitNumber": "HN243737"
+  },
+  {
+    "_id": { "$oid": "591858858f6fa4555477f8a5" },
+    "baseInfo": {
+      "housePicture": [
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170908/201709082105587500.jpg",
+          "enumPictureCategory": 2,
+          "pictureExplain": "",
+          "pictureIndex": 0,
+          "pictureGuid": "7788b131-b63b-4729-804f-e7dd7c60badf"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170819/201708191113273280.jpg",
+          "enumPictureCategory": 7,
+          "pictureExplain": "",
+          "pictureIndex": 1,
+          "pictureGuid": "98a68bd8-a4b5-4d49-936c-0a0d352d8854"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170819/201708191114295873.jpg",
+          "enumPictureCategory": 1,
+          "pictureExplain": "",
+          "pictureIndex": 2,
+          "pictureGuid": "37da7bb8-8f35-472a-bfec-96a796b497e2"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170514/201705142048046676.jpg",
+          "enumPictureCategory": 6,
+          "pictureExplain": "",
+          "pictureIndex": 3,
+          "pictureGuid": "04e78532-cfef-44c8-8a1a-25d6bd351c63"
+        },
+        {
+          "pictureURL": "/upload/landlordunit/day_170908/20170908210745153.jpg",
+          "enumPictureCategory": 2,
+          "pictureExplain": "",
+          "pictureIndex": 4,
+          "pictureGuid": "7d24e55a-1060-4aff-8497-6259584e84a5"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170601/201706011507475220.jpg",
+          "enumPictureCategory": 2,
+          "pictureExplain": "",
+          "pictureIndex": 5,
+          "pictureGuid": "16fa61c8-6c70-4ab7-8acc-5c1c0703bbc9"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170908/201709082108082709.jpg",
+          "enumPictureCategory": 2,
+          "pictureExplain": "",
+          "pictureIndex": 6,
+          "pictureGuid": "66ca1e8d-fc75-4a03-a2af-b901e3b19a41"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170514/201705142039267382.jpg",
+          "enumPictureCategory": 3,
+          "pictureExplain": "",
+          "pictureIndex": 7,
+          "pictureGuid": "77fe0c29-c3dc-4832-9569-acd8381aefd4"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170908/201709082107196623.jpg",
+          "enumPictureCategory": 4,
+          "pictureExplain": "",
+          "pictureIndex": 8,
+          "pictureGuid": "df27f77d-fe72-46b0-a8dc-b48f5bfbd0d6"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170514/201705142034473042.jpg",
+          "enumPictureCategory": 4,
+          "pictureExplain": "",
+          "pictureIndex": 9,
+          "pictureGuid": "d68004de-97cf-47f4-a0ed-58752b0f0b00"
+        },
+        {
+          "pictureURL": "/upload/landlordunit/day_170514/20170514204420545.jpg",
+          "enumPictureCategory": 0,
+          "pictureExplain": "",
+          "pictureIndex": 10,
+          "pictureGuid": "3de7e946-d56f-4e65-bda3-555310b06f4c"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170908/201709082108431260.jpg",
+          "enumPictureCategory": 0,
+          "pictureExplain": "",
+          "pictureIndex": 11,
+          "pictureGuid": "e4a891b4-7564-4fd1-867a-c6a5b9d1f925"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170601/201706011508037302.jpg",
+          "enumPictureCategory": 0,
+          "pictureExplain": "",
+          "pictureIndex": 12,
+          "pictureGuid": "07f7bb71-7909-4601-acb8-1130a5a63ffb"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170619/201706191724235230.jpg",
+          "enumPictureCategory": 0,
+          "pictureExplain": "",
+          "pictureIndex": 13,
+          "pictureGuid": "4f073287-3c32-40ba-9450-e9184cf67721"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170908/201709082106418317.jpg",
+          "enumPictureCategory": 0,
+          "pictureExplain": "stairs",
+          "pictureIndex": 14,
+          "pictureGuid": "05f45d14-d212-48cb-be88-f4385405f942"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170908/201709082107034287.jpg",
+          "enumPictureCategory": 0,
+          "pictureExplain": "stairs",
+          "pictureIndex": 15,
+          "pictureGuid": "f05d81f1-9fc8-4517-9096-f153be629256"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170908/201709082108271441.jpg",
+          "enumPictureCategory": 6,
+          "pictureExplain": "",
+          "pictureIndex": 16,
+          "pictureGuid": "a176c4ff-fc75-42d0-8926-f9f9be74e312"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170514/201705142044539736.jpg",
+          "enumPictureCategory": 1,
+          "pictureExplain": "",
+          "pictureIndex": 17,
+          "pictureGuid": "a4875424-36c6-4d31-bdc1-3dff06f043e4"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170514/201705142011331404.jpg",
+          "enumPictureCategory": 4,
+          "pictureExplain": "",
+          "pictureIndex": 18,
+          "pictureGuid": "dceba4a3-ed87-465c-a2d4-3ec6562c6fe4"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170514/201705142043471036.jpg",
+          "enumPictureCategory": 0,
+          "pictureExplain": "Free Pocket-wif",
+          "pictureIndex": 19,
+          "pictureGuid": "01ce7b28-8711-4e8d-90e1-8bb303a20e6c"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170514/201705142034032818.jpg",
+          "enumPictureCategory": 4,
+          "pictureExplain": "",
+          "pictureIndex": 20,
+          "pictureGuid": "d2100264-e4ba-41b4-824b-e04e3bb0885c"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170514/201705142041194308.jpg",
+          "enumPictureCategory": 3,
+          "pictureExplain": "",
+          "pictureIndex": 21,
+          "pictureGuid": "5ea38ebc-1aa1-4b06-bd00-d7df12d4b2e2"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170514/201705142041541617.jpg",
+          "enumPictureCategory": 4,
+          "pictureExplain": "",
+          "pictureIndex": 22,
+          "pictureGuid": "ebd36c20-c7c9-4a58-b6d2-c6806d35d861"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170514/201705142048464327.jpg",
+          "enumPictureCategory": 0,
+          "pictureExplain": "1F Restroom",
+          "pictureIndex": 23,
+          "pictureGuid": "356a78ec-fbdf-4c3d-b01d-74cf1d91b676"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170514/201705142031463217.jpg",
+          "enumPictureCategory": 7,
+          "pictureExplain": "Floor plan",
+          "pictureIndex": 24,
+          "pictureGuid": "c2f56168-7d6d-4848-ae99-907db6c963a1"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170514/201705142014016667.jpg",
+          "enumPictureCategory": 8,
+          "pictureExplain": "",
+          "pictureIndex": 25,
+          "pictureGuid": "20485591-4e68-49e6-83e9-5329616dd2ec"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170514/201705142031332354.jpg",
+          "enumPictureCategory": 8,
+          "pictureExplain": "",
+          "pictureIndex": 26,
+          "pictureGuid": "c90a64e0-d55c-4f8e-92c4-fb25489a2c29"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170514/201705142053007196.jpg",
+          "enumPictureCategory": 8,
+          "pictureExplain": "Tengachaya Station",
+          "pictureIndex": 27,
+          "pictureGuid": "92a33008-88ba-4a62-8133-ec38510e0adf"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170514/201705142052049852.jpg",
+          "enumPictureCategory": 8,
+          "pictureExplain": "Kisinosato Station",
+          "pictureIndex": 28,
+          "pictureGuid": "332551aa-f429-4d2e-b59f-3b44f580b78d"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_170514/201705142053339257.jpg",
+          "enumPictureCategory": 8,
+          "pictureExplain": "Kisinosato Station",
+          "pictureIndex": 29,
+          "pictureGuid": "21d31818-71c7-4e7f-9974-d77b4436595c"
+        }
+      ],
+      "housingType": {
+        "bedroomCount": 1,
+        "livingroomCount": 1,
+        "bathroomCount": 1,
+        "kitchenCount": 1,
+        "balconyCount": 1,
+        "studyCount": 0
+      },
+      "bedInfo": [
+        { "unitAmenityGoodsID": 18, "unitAmenityGoodsSpecID": 11, "number": 4 }
+      ],
+      "houseLabel": [301],
+      "enumHouseFacilities": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        13,
+        15,
+        16,
+        17,
+        18,
+        19,
+        22,
+        23,
+        24,
+        25,
+        26,
+        28,
+        30,
+        31,
+        32,
+        33,
+        35,
+        40,
+        44,
+        45,
+        47,
+        50,
+        54,
+        55,
+        56,
+        57,
+        59,
+        60
+      ],
+      "name": "4分難波6分心斎橋 : 大阪传统日式住宅",
+      "enumHouseType": 7,
+      "grossArea": 77,
+      "enumScenicFeature": 0,
+      "introduction":
+        "我们没有工作人员说中文。 只有英语和日语可用。\r\n传统日本房子在大阪。\r\n在繁忙的城市中心享受轻松！\r\n休息我的身体和心灵，在城市的中心，享受舒适的日本传统的房子！\r\n享受传统的日本餐桌kotatsu！\r\n我们的房子位于从Kisinosato车站（岸里，Y18 四桥线（蓝线））步行4分钟，或从Tengachaya站步行6分钟（天下茶屋K20）\r\n我不是一个份额\r\n我们的房子位于大阪当地的住宅区\r\n这是非常安静的夜晚，但它是一个非常安全的区域。\r\n你可以感觉到当地居民区的日本和平。\r\n\r\n我的房子不是酒店。\r\n我的房子是投宿民家。\r\n\r\n1.最少入住：2晚\r\n2.NON- smoking\r\n3.请在入口处把鞋脱掉。\r\n4.请不要把你的手提袋放在榻榻米上。 Tatami是微妙和脆弱。 此外，请不要在榻榻米放置湿毛巾。 榻榻米是一个独特的日本文化。 享受触摸和嗅觉。 请尊重日本文化。\r\n5.我们是一个住宅区。 客人应该小心，不要作出过多的噪音，主要是在晚上或当进入或离开家 - 任何我们的邻居的投诉可能会导致取消他们的住宿没有退款。\r\n6.当您出去时，关闭空调和照明的电源 - 为了安全逗留，请关闭家用电子电器的电源。",
+      "brightSpot": "4分難波6分心斎橋：大阪传统日式住宅：站场附近",
+      "instanceCount": 1,
+      "coverGuid": "7788b131-b63b-4729-804f-e7dd7c60badf",
+      "otaName": "一室一厅"
+    },
+    "checkinInstructions": {
+      "acceptTime": [{ "startAcceptTime": "09:00", "endAcceptTime": "22:00" }],
+      "enumAcceptAges": [1, 2],
+      "enumIndoorPermits": [4],
+      "checkInReceptionTime": "16:00",
+      "checkOutLatestTime": "10:00",
+      "enumAcceptSex": 0,
+      "cookingChargeDescription": "你只能做饭简单",
+      "partyChargeDescription": "",
+      "recommendedGuests": 4,
+      "extraPersonChargeDescription": "",
+      "extraBedChargeDescription": "",
+      "enumCleaningFrequency": 1,
+      "enumSheetReplaceFrequency": 1,
+      "enumToothSetReplaceFrequency": 1,
+      "enumTowelReplaceFrequency": 1,
+      "livingFee": "",
+      "checkinPrompt":
+        "1.please show your valid identification for check-in\r\n2.We do not have staff to speak Chinese. Only English and Japanese are available."
+    },
+    "createOperator": "japannamiya@gmail.com",
+    "createOperatorId": { "$numberLong": "5693352" },
+    "createTime": { "$date": "2017-05-14T11:16:44.253Z" },
+    "enumDataEntityStatus": 0,
+    "houseValidate": false,
+    "isActive": true,
+    "lastUpdateOperator": "japannamiya@gmail.com",
+    "lastUpdateOperatorId": { "$numberLong": "5693352" },
+    "lastUpdateTime": { "$date": "2017-05-14T13:15:50.131Z" },
+    "locationInfo": {
+      "cityID": 4191,
+      "residentialQuarterName": "西成区潮路2-10-2",
+      "doorplate": "",
+      "receptionAddress": "日本/大阪西成区潮路2-10-2",
+      "longitude": 135.49233430000004,
+      "latitude": 34.6364554,
+      "geoCoordSysType": "bd09ll"
+    },
+    "photoStatus": 0,
+    "surroundings": {
+      "scenicSpot": [],
+      "subwayStation": [],
+      "locationIntroduction":
+        "步行 6 分钟到达天下茶屋站。\r\n35 分钟到关西国际机场，无需换乘。\r\n步行 6 分钟到达天下茶屋站（南开线和堺筋线）\r\n步行 4 分钟到达岸里站（四桥线）",
+      "surroundingIntroduction":
+        "乘短途列车可到大阪的任何地方。\r\n通天阁2 分钟（1 站）\r\n电器街：4 分钟（2 站）\r\n天王寺：7 分钟（2 站）\r\n道顿堀：14 分钟（3 站）\r\n・梅田：14 分钟\r\n大阪城：17 分钟\r\n日本造币局：20 分钟\r\n大阪海事博物馆29 分钟\r\n海游馆：32 分钟\r\n日本环球影城：36 分钟\r\n奈良：47 分钟\r\n神户：54 分钟\r\n京都：60 分钟"
+    },
+    "tavernGuid": "001dba0d-2475-494e-b29e-58c8355221c4",
+    "unitGuid": "85230672-7422-44b1-a891-8e9edf5b619b",
+    "unitNumber": "HN380735"
+  },
+  {
+    "_id": { "$oid": "57654e4dc5bf672a58374a3a" },
+    "baseInfo": {
+      "housePicture": [
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160304/201603041718346241.jpg",
+          "enumPictureCategory": 1,
+          "pictureExplain": "客厅",
+          "pictureIndex": 1,
+          "pictureGuid": "feda2ed6-c1cb-41c5-b114-d73a2d252da1"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160304/201603041718474114.jpg",
+          "enumPictureCategory": 1,
+          "pictureExplain": "客厅",
+          "pictureIndex": 2,
+          "pictureGuid": "3fc665e6-9150-432c-b039-32b45bcf9ad6"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160304/201603041719109131.jpg",
+          "enumPictureCategory": 2,
+          "pictureExplain": "卧室",
+          "pictureIndex": 4,
+          "pictureGuid": "5dfc9117-47fc-46d0-af63-a7a86dbf96a2"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160304/201603041720443350.jpg",
+          "enumPictureCategory": 0,
+          "pictureExplain": "卧室",
+          "pictureIndex": 3,
+          "pictureGuid": "5a2e7941-039c-4f9d-a22d-70310f0578d8"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160304/201603041719532511.jpg",
+          "enumPictureCategory": 4,
+          "pictureExplain": "卫生间",
+          "pictureIndex": 8,
+          "pictureGuid": "c64b90de-24cc-48c7-ac73-b809731c837f"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160304/201603041720061050.jpg",
+          "enumPictureCategory": 4,
+          "pictureExplain": "卫生间",
+          "pictureIndex": 9,
+          "pictureGuid": "6fe456d8-3421-45c5-81f8-ab187d8eeb5a"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160304/201603041721119413.jpg",
+          "enumPictureCategory": 8,
+          "pictureExplain": "楼道",
+          "pictureIndex": 10,
+          "pictureGuid": "9aff8c29-30a4-4912-9678-3375f25a8cbd"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160304/201603041721181332.jpg",
+          "enumPictureCategory": 8,
+          "pictureExplain": "外景",
+          "pictureIndex": 11,
+          "pictureGuid": "d9524985-9274-40f9-92b3-69d6c4cf8fc9"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160304/201603041724541365.png",
+          "enumPictureCategory": 8,
+          "pictureExplain": "淡水海边",
+          "pictureIndex": 12,
+          "pictureGuid": "bafab2f4-055c-4c72-9a57-44f367ede4c8"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160304/201603041725136174.png",
+          "enumPictureCategory": 8,
+          "pictureExplain": "外景",
+          "pictureIndex": 13,
+          "pictureGuid": "3e457b05-6b4f-4d81-94eb-dcbf1d22d141"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160304/201603041725348334.jpg",
+          "enumPictureCategory": 8,
+          "pictureExplain": "渔人码头",
+          "pictureIndex": 14,
+          "pictureGuid": "ca5ca753-be5d-49ae-b724-801cab75d50c"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160304/201603041726244014.png",
+          "enumPictureCategory": 8,
+          "pictureExplain": "三芝浅水湾",
+          "pictureIndex": 16,
+          "pictureGuid": "05d5e549-7b64-41de-bd6d-3ed964666250"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160304/201603041727186523.jpg",
+          "enumPictureCategory": 8,
+          "pictureExplain": "渔人码头",
+          "pictureIndex": 15,
+          "pictureGuid": "7f466845-4c99-499d-b2d8-7b95ca4df416"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160308/201603081319552196.jpg",
+          "enumPictureCategory": 0,
+          "pictureExplain": "电冰箱",
+          "pictureIndex": 5,
+          "pictureGuid": "c2ed85bf-60e8-49ff-9495-9c73108269bf"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160308/201603081320147146.jpg",
+          "enumPictureCategory": 0,
+          "pictureExplain": "洗衣机",
+          "pictureIndex": 6,
+          "pictureGuid": "a97c93b8-1db8-4145-9656-3b9dee481701"
+        },
+        {
+          "pictureURL":
+            "/upload/landlordunit/day_160308/201603081320345194.jpg",
+          "enumPictureCategory": 0,
+          "pictureExplain": "免费电脑+联网",
+          "pictureIndex": 7,
+          "pictureGuid": "304ed822-7350-4489-8cf4-45e9a1c74549"
+        }
+      ],
+      "housingType": {
+        "bedroomCount": 1,
+        "livingroomCount": 1,
+        "bathroomCount": 1,
+        "kitchenCount": 0,
+        "balconyCount": 0,
+        "studyCount": 0
+      },
+      "bedInfo": [
+        { "unitAmenityGoodsID": 16, "unitAmenityGoodsSpecID": 15, "number": 2 },
+        { "unitAmenityGoodsID": 6, "unitAmenityGoodsSpecID": 0, "number": 1 },
+        { "unitAmenityGoodsID": 2, "unitAmenityGoodsSpecID": 0, "number": 1 },
+        { "unitAmenityGoodsID": 4, "unitAmenityGoodsSpecID": 0, "number": 1 },
+        { "unitAmenityGoodsID": 5, "unitAmenityGoodsSpecID": 0, "number": 1 },
+        { "unitAmenityGoodsID": 3, "unitAmenityGoodsSpecID": 0, "number": 1 },
+        { "unitAmenityGoodsID": 29, "unitAmenityGoodsSpecID": 0, "number": 1 },
+        { "unitAmenityGoodsID": 30, "unitAmenityGoodsSpecID": 0, "number": 1 },
+        { "unitAmenityGoodsID": 31, "unitAmenityGoodsSpecID": 0, "number": 1 },
+        { "unitAmenityGoodsID": 32, "unitAmenityGoodsSpecID": 0, "number": 1 },
+        { "unitAmenityGoodsID": 15, "unitAmenityGoodsSpecID": 0, "number": 1 },
+        { "unitAmenityGoodsID": 46, "unitAmenityGoodsSpecID": 0, "number": 1 }
+      ],
+      "houseLabel": [],
+      "enumHouseFacilities": [1, 2, 3, 4, 5, 6, 8, 9, 17, 19, 22, 46, 47, 48],
+      "name": "淡水捷运站普普风电梯小屋",
+      "enumHouseManagementType": 3,
+      "enumHouseType": 28,
+      "grossArea": 35,
+      "enumScenicFeature": 0,
+      "totalFloors": "14",
+      "enumDecoration": 2,
+      "introduction":
+        "民宿楼设有电梯，砖墙格间及钢门设计极为安静，免除您受噪音的干扰，请您安心入住！房间使用面积11平方米，配有高级独立卫浴。充足的光照和重新粉刷的墙面，将给您的旅程带去一份温馨。房间内配有双人床、大沙发、免费计算机、免费WiFi、分离式冷气、10M光纤无线网络、桌椅、衣柜、洗衣机、电子热水器和电子热水瓶。\n优越的地理位置也是民宿的特点之一，步行1分钟就能到达莱尔富便利店，2分钟到达全联超商。\n步行：15分钟至淡水捷运站；\n公交车：3分钟抵达捷运站（R28接驳公交车15分钟一班）；\n开车：楼下停车场（20元/1小时）。\n\n重要提示：\n1.入住需自备毛巾+牙刷；2.没有煮食电炉或小烤炉（担心室内火灾问题）。\n此外，如果您是专程来台湾，打算多停留几天而不知去哪，我可以推荐一些深度景点给您，大部分以大台北近郊为主，比如阳明山看夜景，很多人都不知道这。族繁不及备载，私房名单很多，只担心您时间不够！\n这些景点包括：\n阳明山竹子湖吃野菜赏芋；\n阳明山擎天岗超大草原野餐；\n阳明山屋顶上时尚咖啡厅；\n阳明山密秘花园咖啡厅；\n内湖大湖公园赏世界最美之桥，内湖白石吊桥（新到没人去过）；\n内湖金龙寺（俯看大台北）；\n东湖尝尝久久热炒；\n新店碧潭吊桥（历史优久，风景美）；\n公馆宝藏严（台北小九份之称）；\n深坑臭豆腐街，吃的过瘾；\n八斗子潮境公园赏对面九份山城；\n鼻头公园（赏东海美景）；\n金山尖角冲浪沙滩，热血沸腾；\n金山八烟部落，新开发传统部落；\n金山老街；\n金山海岸洋果子咖咖馆，人气极高。",
+      "brightSpot": "独门独户，电梯上下",
+      "instanceCount": 1
+    },
+    "checkinInstructions": {
+      "acceptTime": [],
+      "enumServiceProvisions": [2],
+      "enumAcceptAges": [],
+      "enumIndoorPermits": [],
+      "enumCardPaymentTypes": [3],
+      "checkInReceptionTime": "14:00",
+      "checkOutLatestTime": "12:00",
+      "enumAcceptSex": 0,
+      "cookingChargeDescription": "",
+      "partyChargeDescription": "",
+      "recommendedGuests": 2,
+      "extraPersonChargeDescription": "",
+      "extraBedLimit": 0,
+      "extraBedChargeDescription": "",
+      "enumCleaningFrequency": 1,
+      "extraCleaningChargeDescription": "",
+      "enumSheetReplaceFrequency": 1,
+      "extraSheetChargeDescription": "",
+      "enumToothSetReplaceFrequency": 1,
+      "extraToothSetChargeDescription": "",
+      "enumTowelReplaceFrequency": 1,
+      "extraTowelChargeDescription": "",
+      "offlineDeposit": 200,
+      "checkinPrompt": "\r\n\r\n\r\n",
+      "offlineDepositCurrency": 0
+    },
+    "createOperator": "system",
+    "createOperatorId": { "$numberLong": "-99" },
+    "createTime": { "$date": "2016-06-18T13:36:13.716Z" },
+    "enumDataEntityStatus": 0,
+    "houseValidate": false,
+    "isActive": false,
+    "lastUpdateOperator": "system",
+    "lastUpdateOperatorId": { "$numberLong": "-99" },
+    "lastUpdateTime": { "$date": "2016-06-18T13:36:13.716Z" },
+    "locationInfo": {
+      "cityID": 4010,
+      "level2AreaID": 0,
+      "level3AreaID": 0,
+      "residentialQuarterName": "新北市",
+      "doorplate": "",
+      "receptionAddress": "新北市淡水区学府路136巷61号",
+      "longitude": 121.445660591126,
+      "latitude": 25.1677112766465,
+      "geoCoordSysType": "wgs84"
+    },
+    "surroundings": {
+      "scenicSpot": [],
+      "subwayStation": [],
+      "mainBusinessAreaIDs": [],
+      "surroundingIntroduction":
+        "周边景点包括英专路夜市、淡江大学、淡水老街夜市、真理大学、淡水红毛城等。"
+    },
+    "tavernGuid": "002ef19c-d65d-4f47-81fd-05fb476943ec",
+    "unitGuid": "4cf5f788-9936-49b7-8d1f-d1554afe0416",
+    "unitNumber": "HN90901"
+  }
+]

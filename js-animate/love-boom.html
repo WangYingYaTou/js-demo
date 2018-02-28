@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Love Boom!</title>
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+    .HeartAnimation {
+      position: absolute;
+      background-image: url('./web_heart_animation_edge.png');
+      background-position: left;
+      background-repeat: no-repeat;
+      /*background-size: 2900%;*/
+      height: 100px;
+      width: 100px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -47.5%) translateZ(0);
+    }
+
+    .human {
+      position: absolute;
+      background: url("run.png") 0 0 no-repeat;
+      width: 140px;
+      height: 144px;
+      left: 50%;
+      top: 60%;
+      transform: translateX(-50%) translateZ(0);
+    }
+
+    .human-run {
+      animation: heart-burst 0.6s steps(12) infinite;
+    }
+
+    .humans {
+      position: absolute;
+      background: url("run.png") 0 0 no-repeat;
+      width: 140px;
+      height: 144px;
+      left: 50%;
+      top: 85%;
+      transform: translateX(-50%) translateZ(0);
+    }
+
+    .humans-run {
+      animation: human-run 0.6s steps(12) infinite;
+    }
+
+    .footer {
+      position: absolute;
+      top: calc(85% + 144px);
+      width: 3000px;
+      height: 50px;
+      background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+      background-color: #5cb85c;
+      background-size: 100px 100px;
+      animation: ground 1s linear infinite;
+    }
+
+    @keyframes ground {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-200px);
+      }
+    }
+
+
+    @keyframes human-run {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: -1680px 0;
+      }
+    }
+
+    .like-active {
+      animation-timing-function: steps(28);
+      animation-name: heart-burst;
+      animation-duration: 0.5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      display: inline-block
+    }
+
+    @keyframes heart-burst {
+      0% {
+        background-position: left
+      }
+
+      100% {
+        background-position: right
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="HeartAnimation"></div>
+  <div class="human human-run"></div>
+  <div class="humans humans-run"></div>
+  <div class="footer"></div>
+  <script>
+    const ele = document.querySelector('.HeartAnimation')
+    ele.addEventListener('click', e => {
+      ele.classList.contains('like-active') ? ele.classList.remove('like-active') : ele.classList.add('like-active')
+    })
+  </script>
+</body>
+
+</html>

@@ -17,6 +17,48 @@ const promise2 = new Promise((resolve, reject) => {
   setTimeout(() => resolve(2000), 2000)
 })
 
+function co1(generator) {
+  var gen = generator()
+  return new Promise((resolve, reject) => {
+    next()
+    function next(res) {
+      try {
+        var ret = gen.next(res)
+        if (ret.done) return resolve(ret.value)
+        ret.value.then(function(val) {
+          next(val)
+        })
+      } catch (e) {
+        return reject(e)
+      }
+    }
+  })
+}
+
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve(1000), 1000)
+})
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve(2000), 2000)
+})
+
+
+co1(function*() {
+  console.time('all')
+  console.log('begin')
+  const a = yield promise1
+  console.log('a', a)
+  const b = yield promise2
+  console.log('b', b)
+  console.log('end')
+  console.timeEnd('all')
+  return b
+}).then(value => {
+  console.log('all then')
+  console.log('value', value)
+})
+
 function co(gen) {
   let promise = Promise.resolve()
   let iter = gen()
@@ -38,7 +80,7 @@ function co(gen) {
   return promise
 }
 
-co(function*() {
+co1(function*() {
   console.time('all')
   console.log('begin')
   const a = yield promise1
@@ -48,3 +90,11 @@ co(function*() {
   console.log('end')
   console.timeEnd('all')
 })
+
+
+// a 1000
+// b 2000
+// end
+// all: 2003.967041015625ms
+// all then
+// value 2000

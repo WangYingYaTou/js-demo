@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+  </div>
+
+  <script type="text/template" id="tpl_profile2">
+    <h3>关于我</h3>
+    <div class="profile">
+      <h3 class="name">戴嘎豪我是
+        <%=name%>
+      </h3>
+      <p class="desc">我年方
+        <%=age%>，喜欢看
+          <a href="<%=hobby.weibo_url%>">
+            <%=hobby.weibo_name%>
+          </a>。</p>
+      <p class="desc">博客地址：
+        <a href="<%=repo.author_url%>">
+          <%=repo.author%>
+        </a>/
+        <a href="<%=repo.repo_url%>">
+          <%=repo.repo_name%>
+        </a>
+      </p>
+      <p class="desc">
+        <%=repo.author+'/'+repo.repo_name%>
+      </p>
+      <p>
+        当前时间
+        <%= Date() %>
+      </p>
+
+
+
+      <h3>我的书单</h3>
+      <% for(var i=0;i< books.length;i++){ %>
+        <div class="book">
+          <p class="title">
+            <%=books[i].title%>
+              <span class="price">$
+                <%=books[i].price%>
+              </span>
+          </p>
+          <p class="desc">
+            <%=books[i].desc%>
+          </p>
+        </div>
+        <% } %>
+    </div>
+  </script>
+
+  <script>
+    // function compile(selector, data) {
+    //   var delimiter = /(<%.*?%>)/g, //通用标识符
+    //     displayDelimiter = /<%=(.*?)%>/g, //显示表达式标识符
+    //     expDelimiter = /<%(.*?)%>/g; //逻辑表达式标识符
+
+    //   // var tplStr = document.querySelector(selector).innerHTML
+    //   // tplStr = tplStr.replace(/<%=(.*?)%>/g, function (match, p1) {
+    //   //   return data[p1]
+    //   // })
+    //   // return tplStr
+
+    //   var tplStr = document.querySelector(selector).innerHTML;
+    //   var fnBody = 'with(arguments[0]){var result="";';
+
+    //   tplStr
+    //     .replace(/[\r\n\t]/g, '') //去掉换行，否则在 return 时会报错
+    //     .replace(/([\"\'])/g, '\\$1') //将模板中的引号转义以防止在后面拼接字符串时出错
+    //     .split(delimiter)
+    //     .map(fragment => {
+    //       if (displayDelimiter.test(fragment)) {
+    //         fragment = fragment.replace(/\\([\"\'])/g, '$1'); //将变量中被转义的引号恢复
+    //         fnBody += 'result+=' + fragment.replace(displayDelimiter, '$1') + ';';
+    //       } else if (expDelimiter.test(fragment)) {
+    //         fragment = fragment.replace(/\\([\"\'])/g, '$1');
+    //         fnBody += fragment.replace(expDelimiter, '$1');
+    //       } else {
+    //         fnBody += 'result+="' + fragment + '";';
+    //       }
+    //     });
+    //   fnBody += 'return result;}';
+
+    //   return new Function(fnBody);
+    // }
+
+    function compile(selector) {
+      var delimiter = /(<%.*?%>)/g, //通用标识符
+        displayDelimiter = /<%=(.*?)%>/g, //显示表达式标识符
+        expDelimiter = /<%(.*?)%>/g; //逻辑表达式标识符
+      var tplStr = document.querySelector(selector).innerHTML;
+      var fnBody = 'with(arguments[0]){var result="";';
+
+      tplStr
+        .replace(/[\r\n\t]/g, '') //去掉换行，否则在 return 时会报错
+        .replace(/([\"\'])/g, '\\$1') //将模板中的引号转义以防止在后面拼接字符串时出错
+        .split(delimiter)
+        .map(fragment => {
+          if (displayDelimiter.test(fragment)) {
+            fragment = fragment.replace(/\\([\"\'])/g, '$1'); //将变量中被转义的引号恢复
+            fnBody += 'result+=' + fragment.replace(displayDelimiter, '$1') + ';';
+          } else if (expDelimiter.test(fragment)) {
+            fragment = fragment.replace(/\\([\"\'])/g, '$1');
+            fnBody += fragment.replace(expDelimiter, '$1');
+          } else {
+            fnBody += 'result+="' + fragment + '";';
+          }
+        });
+      fnBody += 'return result;}';
+
+      return new Function(fnBody);
+    }
+
+
+    var a =
+      `
+    <h3>关于我</h3>
+    <div class="profile">
+      <h3 class="name">戴嘎豪我是
+        <%=name%>
+      </h3>
+      <p class="desc">我年方
+        <%=age%>，喜欢看
+          <a href="<%=hobby.weibo_url%>">
+            <%=hobby.weibo_name%>
+          </a>。</p>
+      <p class="desc">博客地址：
+        <a href="<%=repo.author_url%>">
+          <%=repo.author%>
+        </a>/
+        <a href="<%=repo.repo_url%>">
+          <%=repo.repo_name%>
+        </a>
+      </p>
+      <p class="desc">
+        <%=repo.author+'/'+repo.repo_name%>
+      </p>
+    </div>
+  `
+
+    function buildHtml(selector) {
+      var tplStr = document.querySelector(selector).innerHTML
+      tplStr = tplStr.replace(/[\r\n\t]/g, '')
+        .replace(/([\"\'])/g, '\\$1') //将模板中的引号转义以防止在后面拼接字符串时出错
+        .replace(/<%=(.*?)%>/g, function (match, p1) {
+          return '"+' + //将非变量部分用字符串包裹
+            p1.replace(/([\\"\\'])/g, escapedItem => {
+              return escapedItem.replace('\\', ''); //将变量中被转义的引号恢复
+            }) +
+            '+"'
+        })
+
+      console.log('with(arguments[0]) {return "' + tplStr + '"}');
+      return new Function('with(arguments[0]) {return "' + tplStr + '"}')
+    }
+
+    var data = {
+      name: '风暴降生丹妮莉丝，不焚者，弥林的女王，安达尔人，洛伊拿人和先民的女王，七国统治者暨全境守护者，大草海的卡丽熙，奴隶解放者，龙之母，跟男下属通奸者，卡奥终结者，寡妇制造者，寡妇村纵火者。',
+      age: 28,
+      hobby: {
+        weibo_url: 'https://weibo.com/u/6257076674',
+        weibo_name: '大飚哥带路',
+      },
+      repo: {
+        author: '你大哥',
+        repo_name: 'https://huyansheng3.github.io'
+      },
+      books: [{
+          isbn: '1988',
+          title: '《程序员的自我修养》',
+          price: -1,
+          desc: '程序员有自我修养我给你钱'
+        },
+        {
+          isbn: '2045',
+          title: '《程序员有没有自我修养》',
+          price: 0,
+          desc: '世纪之问，历史的拷问，扪心自问'
+        },
+        {
+          isbn: '1984',
+          title: '《程序员其实不在乎自我修养》',
+          price: 998,
+          desc: "Don't bb, show me the code"
+        }
+      ]
+    }
+
+    document.getElementById('app').innerHTML = compile('#tpl_profile2')(data)
+  </script>
+  <!-- <script src="./tpl.js"></script> -->
+  <!-- <script src="./index.js"></script> -->
+
+</body>
+
+</html>

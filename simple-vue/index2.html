@@ -38,7 +38,7 @@
       return new Observe(data)
     }
 
-    // 变量替换，将 vm 上的数据替换到 el 上，增加依赖绑定
+    // 编译模板，替换变量 （所有的模板引擎都会有这一部）；增加依赖绑定，
     // compile 仅调用一次，后续都通过 watch 的回调修改 dom
     function Compile(el, vm) {
       vm.$el = document.querySelector(el)
@@ -121,7 +121,7 @@
       this.fn = fn
 
       // 请注意，这里用了一个小小的技巧，将 Dep.target 设为当前的实例
-      // 然后触发 get 方法，而 get 方法会判断一次 Dep.target 是否为空，
+      // 然后！！故意触发 get 方法，而 get 方法会判断 Dep.target 是否为空，
       // 并将 watcher 加入 Dep 中，所以只有new Watcher 会触发依赖的收集
       Dep.target = this;
       let arr = exp.split('.');

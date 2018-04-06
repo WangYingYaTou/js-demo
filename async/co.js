@@ -9,6 +9,28 @@ var gen1 = gen()
 gen1.next()
 gen1.next()
 
+function gen1() {
+  let step = 0,
+    value
+  return function() {
+    while (1) {
+      switch (step) {
+        case 0:
+          step = step + 1
+          value = { status: 'unresolved', value: 1 }
+          break
+        case 1:
+          step = step + 1
+          value = { status: 'unresolved', value: 2 }
+        case 3:
+          step = step + 1
+          value = { status: 'done', value: undefined }
+      }
+    }
+    return value
+  }
+}
+
 const promise1 = new Promise((resolve, reject) => {
   setTimeout(() => resolve(1000), 1000)
 })
@@ -42,7 +64,6 @@ const promise1 = new Promise((resolve, reject) => {
 const promise2 = new Promise((resolve, reject) => {
   setTimeout(() => resolve(2000), 2000)
 })
-
 
 co1(function*() {
   console.time('all')
@@ -90,7 +111,6 @@ co1(function*() {
   console.log('end')
   console.timeEnd('all')
 })
-
 
 // a 1000
 // b 2000

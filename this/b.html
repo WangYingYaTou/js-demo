@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    .btn {
+      float: left;
+      width: 100px;
+      height: 25px;
+      margin: 0px 20px 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- btn[0]按钮 -->
+  <button class="btn">a</button>
+  <!-- btn[1]按钮 -->
+  <button class="btn">b</button>
+</body>
+<script>
+  var name2 = 'window'
+
+  function Obj() {
+    this.name = ''
+    this.name2 = ''
+  }
+  Obj.prototype.setName = function (name) {
+    this.name = name
+  }
+  Obj.prototype.setName2 = (name) => {
+    this.name2 = name
+  }
+  Obj.prototype.showName = function () {
+    console.log(this.name)
+  }
+  Obj.prototype.showName2 = () => {
+    console.log(this.name2)
+  }
+  var a = new Obj();
+  console.log(name2) // => window
+  a.setName('我是普通函数')
+  a.setName2('我是箭头函数')
+  a.showName() // => 我是普通函数
+  a.showName2() // => 我是箭头函数
+  console.log(name2) // => 我是箭头函数
+
+  throw Error('啦啦啦啦啦')
+</script>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    .btn {
+      float: left;
+      width: 100px;
+      height: 25px;
+      margin: 0px 20px 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- btn[0]按钮 -->
+  <button class="btn">a</button>
+  <!-- btn[1]按钮 -->
+  <button class="btn">b</button>
+</body>
+<script>
+  var btn = document.getElementsByTagName('button');
+  var a = () => {
+    console.log(this)
+    // 输出window
+  }
+
+  function b() {
+    console.log(this)
+    // 输出dom对象button
+  }
+  btn[0].onclick = a
+  btn[1].onclick = b
+</script>
+
+</html>

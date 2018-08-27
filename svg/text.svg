@@ -1,0 +1,100 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <!-- <text x="20"  y="40">Example SVG text 11111111111111111111111111111111111111111111</text>
+    <line x1="10" y1="40" x2="150" y2="40" style="stroke: #000000"/> -->
+
+
+  <!-- <text x="20" y="40"
+      style="fill: #000000; stroke: none; font-size: 48px;">
+    Fill only
+</text>
+<text x="20" y="100"
+      style="fill: none; stroke: #000000;  font-size: 48px;">
+    Stroke only
+</text>
+<text x="20" y="150"
+      style="fill: #ff9999; stroke: #0000ff;   stroke-width:20; font-size: 48px;">
+    Fill and stroke
+</text> -->
+
+
+<!-- <text x="20"  y="20" >Example SVG text</text>
+<text x="20"  y="40" style="kerning:2;">Example SVG text</text>
+<text x="20"  y="60" style="letter-spacing:2;">Example SVG text</text> -->
+
+ <!-- <text x="20"  y="40"
+          transform="rotate(45 20,40)"
+          style="stroke:none; fill:#000000;"
+          >Rotated SVG text</text> -->
+
+<!-- <text x="10" y="10" style="writing-mode: tb; glyph-orientation-vertical: 0;">
+    Vertical
+</text>
+
+<text x="110" y="10" style="writing-mode: tb; glyph-orientation-vertical: 90;">
+    Vertical
+</text> -->
+
+<!-- <text x="100" y="40" style="direction: rtl; unicode-bidi: bidi-override;">
+    Left to right
+</text> -->
+
+
+    <!-- <text x="20"  y="40"
+          style="font-family: Arial;
+                 font-size  : 34;
+                 stroke     : #000000;
+                 fill       : #00ff00;
+                "
+          >Styled SVG text</text> -->
+
+<!-- <text x="5" y="20" textLength="140" lengthAdjust="spacing">
+  A long, long, long text.
+</text>
+<text x="5" y="40" textLength="200" lengthAdjust="spacing">
+    A long, long, long text.
+</text>
+<text x="5" y="60" textLength="200" lengthAdjust="spacingAndGlyphs">
+    A long, long, long text.
+</text> -->
+
+  <!-- <defs>
+        <text id="theText">A text that is referenced.</text>
+    </defs>
+
+    <text x="20" y="10">
+        <tref xlink:href="#theText" />
+    </text>
+    <text x="30" y="30">
+        <tref xlink:href="#theText" />
+    </text> -->
+
+
+
+      <defs>
+        <path id="myTextPath"
+              d="M75,20
+                 a1,1 0 0,0 100,0
+               "
+                />
+    </defs>
+
+    <text x="10" y="100" style="stroke: #000000;">
+      <textPath xlink:href="#myTextPath" >
+            Text along a curved path...
+      </textPath>
+    </text>
+
+
+    <defs>
+    <path id="myTextPath2"
+          d="M75,20 l100,0 l100,30 q0,100 150,100"/>
+</defs>
+
+<text x="10" y="100" style="stroke: #000000;">
+    <textPath xlink:href="#myTextPath2">
+        Text along a more advanced path with lines and curves.
+    </textPath>
+</text>
+</svg>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .pie {
+      width: 200px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="pie" data-pie="#fab484 5, #fe8e3f 3, #f96b07 3, #b45919 3, #7f4319 1">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <circle id="graph" r="16" cx="16" cy="16"></circle>
+        <mask id="clip">
+          <use xlink:href="#graph" fill="#FFF"></use>
+        </mask>
+      </defs>
+      <g class="graph" mask="url(#clip)" stroke-width="32">
+        <!-- <use class="graph__percent graph__percent--0" xlink:href="#graph" fill="none" stroke="#fab484" stroke-dasharray="0 0 33.33333333333333 100"></use> -->
+        <circle id="graph" r="16" cx="16" cy="16"fill="none" stroke="#fab484" stroke-dasharray="0 0 33.33333333333333 100"></circle>
+        <circle id="graph" r="16" cx="16" cy="16"fill="none" stroke="#fe8e3f" stroke-dasharray="0 33.33333333333333 20 100"></circle>
+        <circle id="graph" r="16" cx="16" cy="16"fill="none" stroke="#f96b07" stroke-dasharray="0 53.333333333333336 20 100"></circle>
+        <circle id="graph" r="16" cx="16" cy="16"fill="none" stroke="#b45919" stroke-dasharray="0 73.33333333333333 20 100"></circle>
+        <circle id="graph" r="16" cx="16" cy="16"fill="none" stroke="#7f4319" stroke-dasharray="0 93.33333333333333 6.666666666666667 100"></circle>
+        
+        <!-- <use class="graph__percent graph__percent--1" xlink:href="#graph" fill="none" stroke="#fe8e3f" stroke-dasharray="0 33.33333333333333 20 100"></use>
+        <use class="graph__percent graph__percent--2" xlink:href="#graph" fill="none" stroke="#f96b07" stroke-dasharray="0 53.333333333333336 20 100"></use>
+        <use class="graph__percent graph__percent--3" xlink:href="#graph" fill="none" stroke="#b45919" stroke-dasharray="0 73.33333333333333 20 100"></use>
+        <use class="graph__percent graph__percent--4" xlink:href="#graph" fill="none" stroke="#7f4319" stroke-dasharray="0 93.33333333333333 6.666666666666667 100"></use> -->
+      </g>
+    </svg>
+  </div>
+</body>
+
+</html>

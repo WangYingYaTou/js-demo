@@ -292,7 +292,7 @@ Promise.reject = function(reason) {
  *参考jQuery.Deferred
  *url: http://api.jquery.com/category/deferred-object/
  */
-Promise.deferred = function() {
+Promise.deferred = function () {
   // 延迟对象
   let defer = {}
   defer.promise = new Promise((resolve, reject) => {

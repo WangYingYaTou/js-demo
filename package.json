@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@didi/watermark": "^1.0.0"
+    "@didi/watermark": "^1.0.0",
+    "convert-excel-to-json": "^1.4.1"
   }
 }

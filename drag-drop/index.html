@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box3 {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div draggable="true" class="box3">
+
+    </div>
+
+    <div class="box2">
+
+    </div>
+
+
+    <script type="text/javascript">
+        //拖拽元素
+        var box3 = document.querySelector(".box3");
+        //目标元素
+        var target = document.querySelector(".box2");
+        //拖拽元素的事件
+        box3.ondragstart = function (e) {
+            console.log("拖拽开始");
+            console.log('dataTransfer', e.dataTransfer);
+            //输出结果是以下
+            /*
+            DataTransfer {dropEffect: "none", 
+                          effectAllowed: "uninitialized",
+                           items:DataTransferItemList, 
+                          types: Array(0), 
+                          files: FileList}
+            dropEffect:"link"
+            effectAllowed:"link"
+            files:FileList
+            items:DataTransferItemList
+            types:Array(0)
+            __proto__:DataTransfer
+            */
+            e.dataTransfer.effectAllowed = "move";
+            e.dataTransfer.setData("text", e.target.className);
+        }
+        box3.ondrag = function () {
+            console.log("拖拽中");
+        }
+        box3.ondragend = function () {
+            console.log("拖拽结束");
+        }
+        //目标元素的事件
+        target.ondragenter = function () {
+            console.log("进入目标元素");
+        }
+        target.ondragleave = function () {
+            console.log("离开目标元素");
+        }
+        //
+        target.ondragover = function (e) {
+            console.log("在目标元素上移动");
+            e.preventDefault();//阻止浏览器的默认事件  才可以触发ondrop事件
+            e.dataTransfer.dropEffect = "move";
+        }
+        target.ondrop = function (e) {
+            console.log("在目标元素上放手");
+            //target.appendChild(box3);
+            var eclassName = e.dataTransfer.getData("text");
+            target.appendChild(document.querySelector("." + eclassName))
+            //在目标元素里面追加拖拽的元素
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .parent {
+            height: 80px;
+            width: 100%;
+            overflow: hidden;
+            /* background-color: aquamarine; */
+        }
+
+        .content {
+            /* background-color: greenyellow; */
+            height: 106px;
+            /* 多出26像素是滚动条的位置，会被父容器盖住就看不到了 */
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+
+        p {
+            white-space: nowrap;
+            background-color: burlywood;
+            /* 不换行 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="content">
+            <p>整一长段文章进来看效果 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾 整一长段文章进来看效果 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾
+                整一长段文章进来看效果 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾整一长段文章进来看效果 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾
+                整一长段文章进来看效果 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾 整一长段文章进来看效果 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾
+                整一长段文章进来看效果 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾整一长段文章进来看效果 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾
+                整一长段文章进来看效果 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾整一长段文章进来看效果 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾
+                整一长段文章进来看效果 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾整一长段文章进来看效果 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾
+                整一长段文章进来看效果 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾整一长段文章进来看效果 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾 拉梁爱啦啦靓阿拉蕾
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -24,26 +24,21 @@ axios.interceptors.response.use(
 );
 
 function fetchJson(url) {
-  debugger;
-
   return axios
     .get(url)
     .then(html => {
       var $ = cheerio.load(html, { decodeEntities: false });
-      debugger;
-      if ($(".ma_h1") && $(".ma_h1")[0]) {
+      if ($(".ma_h1") && $(".ma_h1")[0] && $(".ma_h1")[0].attribs.href) {
         return "https://www.qichacha.com" + $(".ma_h1")[0].attribs.href;
       } else {
         return Promise.reject("查不到");
       }
     })
     .catch(error => {
-      debugger;
-      console.log("出错了！");
+      console.error("请求出错了！");
+      return Promise.reject(error);
     });
 }
-
-// https://baike.baidu.com/item/%E5%A4%A7%E8%BF%9E%E6%B1%87%E8%AF%9A%E5%BE%81%E4%BF%A1%E7%AE%A1%E7%90%86%E9%A1%BE%E9%97%AE%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
 
 const list = fs
   .readFileSync(path.join(__dirname, "./data.txt"), { encoding: "utf-8" })
@@ -59,15 +54,28 @@ async function saveMovies() {
     const url = encodeURI(`https://www.qichacha.com/search?key=${item}`);
 
     await fetchJson(url).then(result => {
-      axios.get(result).then(html => {
-        var $ = cheerio.load(html, { decodeEntities: false });
-        const tds = $(".ntable tr td", "#Cominfo");
-        tds.each((idx, ele) => {
-          if ($(ele).text() === "统一社会信用代码：") {
-            obj[item] = $(tds[idx + 1]).text();
+      console.log("realUrl: ", result);
+      return axios
+        .get(result)
+        .then(html => {
+          var $ = cheerio.load(html, { decodeEntities: false });
+          const tds = $(".ntable tr td", "#Cominfo");
+          let hasInfo = false;
+          tds.each((idx, ele) => {
+            if ($(ele).text() === "统一社会信用代码：") {
+              hasInfo = true;
+              obj[item] = $(tds[idx + 1]).text();
+              console.log(`finished ${item}：${obj[item]}`);
+            }
+          });
+
+          if (!hasInfo) {
+            return Promise.reject("没有找到统一社会需用代码");
           }
+        })
+        .catch(error => {
+          console.error(error);
         });
-      });
     });
   }
 }

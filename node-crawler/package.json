@@ -11,6 +11,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "byline": "^5.0.0",
+    "cheerio": "^1.0.0-rc.2",
     "json2csv": "^3.11.5",
     "json2csv-stream": "^0.1.4",
     "readline-stream": "^1.0.2",

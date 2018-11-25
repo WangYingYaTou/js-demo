@@ -11,6 +11,7 @@
     Sentry.init({
       dsn: 'https://bdd85c9f67944005ba27f6f976ede170@sentry.io/1328721'
     });
+
   </script>
 
 </head>
@@ -20,13 +21,9 @@
 
 
   <script>
-    console.error('123')
-
-    function add(a, ) {
+    setTimeout(() => {
       throw 123
-    }
-
-    console.log(add(1, 1));
+    }, 2000)
 
   </script>
 </body>

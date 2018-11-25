@@ -11,10 +11,21 @@
 
 <body>
   <h1>用 js 实现 generator！！！！ amazing！！！</h1>
+
+  <pre>
+      function *test(){
+        yield 1
+        yield 2
+      }
+      
+      var g = test()
+      console.log(g.next())
+      console.log(g.next())
+      console.log(g.next())
+  </pre>
+
   <script>
     "use strict";
-
-    var _marked = /*#__PURE__*/ regeneratorRuntime.mark(test);
 
     function test() {
       return regeneratorRuntime.wrap(
@@ -39,6 +50,8 @@
         this
       );
     }
+
+    var _marked = /*#__PURE__*/ regeneratorRuntime.mark(test);
 
     var g = test();
     console.log(g.next());

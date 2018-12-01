@@ -28,20 +28,25 @@
     "use strict";
 
     function test() {
+      debugger
       return regeneratorRuntime.wrap(
         function test$(_context) {
+          debugger
           while (1) {
             switch ((_context.prev = _context.next)) {
               case 0:
+                debugger
                 _context.next = 2;
                 return 1;
 
               case 2:
+                debugger
                 _context.next = 4;
                 return 2;
 
               case 4:
               case "end":
+                debugger
                 return _context.stop();
             }
           }
@@ -50,12 +55,20 @@
         this
       );
     }
-
+    
+    debugger
     var _marked = /*#__PURE__*/ regeneratorRuntime.mark(test);
 
+    debugger
     var g = test();
+
+    debugger
     console.log(g.next());
+
+    debugger
     console.log(g.next());
+
+    debugger
     console.log(g.next());
 
   </script>

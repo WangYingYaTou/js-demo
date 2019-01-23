@@ -24,6 +24,9 @@
         div.innerHTML = domString;
         return div;
       };
+      
+      let setStating = false
+      let callStacks = []
 
       class Component {
         constructor(props = {}) {

@@ -1,74 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/lodash.js/4.17.5/lodash.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <script src="https://cdn.bootcss.com/lodash.js/4.17.5/lodash.min.js"></script>
-  <script src="https://cdn.bootcss.com/vue/2.5.13/vue.min.js"></script>
-</head>
+  <body>
+    <div id="sudoku-demo">
+      <Test :msg="msg.a.b.d"></Test>
+      <!-- <TestDemo :msg="msg"></TestDemo> -->
+      <!-- <test-demo :msg="msg"></test-demo> -->
+    </div>
 
-<body>
-
-  <div id="sudoku-demo">
-    <Test :msg="msg"></Test>
-    <!-- <TestDemo :msg="msg"></TestDemo> -->
-    <!-- <test-demo :msg="msg"></test-demo> -->
-  </div>
-
-  <script>
-    Vue.component('Test', {
-      template: `<div class="test">{{ msg }}</div>`,
-      props: ['msg'],
-      updated() {
-        console.log('Test updated');
-      },
-      beforeUpdate() {
-        console.log('Test beforeUpdate');
-      }
-    })
-
-    Vue.component('TestDemo', {
-      template: `<div class="test-demo">{{ msg }}</div>`,
-      props: ['msg'],
-      updated() {
-        console.log('TestDemo updated');
-      },
-      beforeUpdate() {
-        console.log('TestDemo beforeUpdate');
-      }
-    })
-
-
-    new Vue({
-      el: '#sudoku-demo',
-      data() {
-        return {
-          msg: 1
+    <script>
+      Vue.component("Test", {
+        template: `<div class="test">{{ msg }}</div>`,
+        props: ["msg"],
+        updated() {
+          console.log("Test updated");
+        },
+        beforeUpdate() {
+          console.log("Test beforeUpdate");
         }
-      },
-      methods: {
-        shuffle: function () {
-          this.cells = _.shuffle(this.cells)
+      });
+
+      Vue.component("TestDemo", {
+        template: `<div class="test-demo">{{ msg }}</div>`,
+        props: ["msg"],
+        updated() {
+          console.log("TestDemo updated");
+        },
+        beforeUpdate() {
+          console.log("TestDemo beforeUpdate");
         }
-      },
-      mounted() {
-        setInterval(() => {
-          this.msg += 1
-        }, 1000)
-      },
-      updated() {
-        console.log('demo updated');
-      },
-      beforeUpdate() {
-        console.log('demo beforeUpdate');
-      }
-    })
+      });
 
-  </script>
-
-</body>
-
+      new Vue({
+        el: "#sudoku-demo",
+        data() {
+          return {
+            msg: {
+              a: {
+                b: {
+                  c: 1,
+                  d: 2
+                }
+              }
+            }
+          };
+        },
+        methods: {
+          shuffle: function() {
+            this.cells = _.shuffle(this.cells);
+          }
+        },
+        mounted() {
+          setInterval(() => {
+            this.msg.a.b.d += 1;
+          }, 1000);
+        },
+        updated() {
+          console.log("demo updated");
+        },
+        beforeUpdate() {
+          console.log("demo beforeUpdate");
+        }
+      });
+    </script>
+  </body>
 </html>

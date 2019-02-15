@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>vue-dep-test</title>
+    <script src="https://cdn.bootcss.com/lodash.js/4.17.5/lodash.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="sudoku-demo">
+      {{ d.m[1].a }}
+    </div>
+
+    <script>
+      window.vm = new Vue({
+        el: "#sudoku-demo",
+        data() {
+          return {
+            a: {
+              b: 1,
+              c: 2
+            },
+            d: {
+              f: 3,
+              m: [1, { a: 1 }]
+            }
+          };
+        },
+        mounted() {
+          setTimeout(() => {
+            this.d.m[1].a = 300;
+          }, 1000);
+        },
+        updated() {
+          console.log("demo updated");
+        }
+      });
+    </script>
+  </body>
+</html>

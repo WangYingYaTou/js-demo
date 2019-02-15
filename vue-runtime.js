@@ -8030,3 +8030,6 @@ if (inBrowser) {
 /*  */
 
 export default Vue;
+
+debugger
+window.Vue = Vue

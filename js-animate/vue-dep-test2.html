@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>vue-dep-test</title>
+    <script src="https://cdn.bootcss.com/lodash.js/4.17.5/lodash.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="sudoku-demo">
+      <div v-if="bool">
+        {{ count }}
+      </div>
+      <div v-else>
+        hahahah
+      </div>
+    </div>
+
+    <script>
+      window.vm = new Vue({
+        el: "#sudoku-demo",
+        data() {
+          return {
+            bool: true,
+            count: 0
+          };
+        },
+        mounted() {
+          setInterval(() => {
+            this.count += 1;
+          }, 1000);
+
+          setTimeout(() => {
+            this.bool = false;
+          }, 3000);
+        },
+        updated() {
+          console.log("demo updated");
+        }
+      });
+    </script>
+  </body>
+</html>

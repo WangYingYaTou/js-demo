@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <style>
+    /* bezier examples sheet */
+
+    body {
+      padding: 10px;
+      margin: 0px;
+      background: #fff;
+    }
+
+    .dot1 {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: url("images/red_dot.gif");
+      font-size: 1px;
+    }
+
+    .dot2 {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: url("images/blue_dot.gif");
+      font-size: 1px;
+    }
+
+    .pix {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: url("images/small_dot.gif");
+      font-size: 1px;
+    }
+
+    p {
+      margin: 0px 0px 14px 0px;
+      font-size: 11px;
+      font-family: tahoma, arial, helvetica, sans-serif;
+      color: #000;
+      background: #fff;
+    }
+
+    .divBox {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      width: 6px;
+      height: 6px;
+      background: url("./red_dot.gif");
+      font-size: 1px;
+    }
+
+    #divLine {
+      position: absolute;
+      top: 306px;
+      left: 0px;
+      width: 400px;
+      height: 1px;
+      background: #000;
+      font-size: 1px;
+    }
+
+    /* end */
+
+  </style>
+</head>
+
+<body>
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500"
+    viewBox="0 0 500 500">
+    <path fill="transparent" stroke="black" id="path"></path>
+  </svg>
+  <script>
+    //====================================\\
+    // 13thParallel.org Beziér Curve Code \\
+    //   by Dan Pupius (www.pupius.net)   \\
+    //====================================\\
+
+    coord = function (x, y) {
+      if (!x) var x = 0;
+      if (!y) var y = 0;
+      return {
+        x: x,
+        y: y
+      };
+    };
+
+    B1 = function (t) {
+      return t * t * t;
+    };
+    B2 = function (t) {
+      return 3 * t * t * (1 - t);
+    };
+    B3 = function (t) {
+      return 3 * t * (1 - t) * (1 - t);
+    };
+    B4 = function (t) {
+      return (1 - t) * (1 - t) * (1 - t);
+    };
+
+    function getBezier(percent, C1, C2, C3, C4) {
+      var pos = new coord();
+      pos.x =
+        C1.x * B1(percent) +
+        C2.x * B2(percent) +
+        C3.x * B3(percent) +
+        C4.x * B4(percent);
+      pos.y =
+        C1.y * B1(percent) +
+        C2.y * B2(percent) +
+        C3.y * B3(percent) +
+        C4.y * B4(percent);
+      return pos;
+    }
+
+    //Control Points
+    P1 = coord(50, 50);
+    P2 = coord(300, 50);
+    P3 = coord(50, 300);
+    P4 = coord(300, 300);
+
+    stage = 0;
+    dir = 0;
+    let points = []
+
+    function doCurve() {
+      //change direction of motion at each end of the curve
+      if (stage > 1) dir = 1;
+      if (stage < 0) dir = 0;
+
+      //increment to next step
+      if (dir == 0) stage += 0.01;
+      else stage -= 0.01;
+
+      //find position on bezier curve
+      var curpos = getBezier(stage, P1, P2, P3, P4);
+      points.push(curpos)
+
+    }
+
+    for (let i = 0; i < 130; i++) {
+      doCurve();
+    }
+
+    var path = document.querySelector('#path')
+
+    var d = ''
+    points.forEach((point, index) => {
+      if (index === 0) {
+        d += `M ${point.x} ${point.y} `
+      } else {
+        d += `L ${point.x} ${point.y} `
+      }
+    })
+
+    path.setAttribute('d', d)
+
+  </script>
+</body>
+
+</html>
